@@ -33,7 +33,7 @@ void DMSScheduler::scheduleByDMS(std::vector<Process>& pVct)
 		dbLines.push_back("Line " + pVct[i].name + ": ");
 	}
 
-	int repeatPoint = Lib::lcmOfN(peroids);
+	int repeatPoint = KitchensinkLib::lcmOfN(peroids);
 
 	while (true)
 	{
@@ -41,7 +41,7 @@ void DMSScheduler::scheduleByDMS(std::vector<Process>& pVct)
 		//break condition
 		if (currentTime >= repeatPoint){
 			std::cout << "Scheduling done" << std::endl;
-			Lib::writeDbLines(dbLines);
+			KitchensinkLib::writeDbLines(dbLines);
 
 			return;
 		}
@@ -93,14 +93,14 @@ void DMSScheduler::scheduleByDMS(std::vector<Process>& pVct)
 			if (needsTime[i] && timeNeeded[i]-1 + timeAfterCurrentWindow > pVct[i].prio)
 			{
 				std::cout << "Scheduling failed. Process " << pVct[i].name << " could not be executed within its deadline" << std::endl;
-				Lib::writeDbLines(dbLines);
+				KitchensinkLib::writeDbLines(dbLines);
 				return;
 			}
 
 			if (lastExecWindow[i] + 1 < endWindow)
 			{
 				std::cout << "Scheduling failed. Process " << pVct[i].name << " could not be executed in time" << std::endl;
-				Lib::writeDbLines(dbLines);
+				KitchensinkLib::writeDbLines(dbLines);
 				return;
 			}
 

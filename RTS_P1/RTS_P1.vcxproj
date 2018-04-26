@@ -70,6 +70,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Process.cpp" />
     <ClCompile Include="RMSScheduler.cpp" />
+    <ClCompile Include="RTAScheduler.cpp" />
     <ClCompile Include="StaticScheduler.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -78,13 +79,19 @@
     <Text Include="T1.txt" />
     <Text Include="T2.txt" />
     <Text Include="T3.txt" />
+    <Text Include="T4.txt" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DMSScheduler.h" />
     <ClInclude Include="KitchensinkLib.h" />
     <ClInclude Include="Process.h" />
+    <ClInclude Include="resource.h" />
     <ClInclude Include="RMSScheduler.h" />
+    <ClInclude Include="RTAScheduler.h" />
     <ClInclude Include="StaticScheduler.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="RTS_P1.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

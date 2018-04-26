@@ -7,6 +7,8 @@
 #include "StaticScheduler.h"
 #include "RMSScheduler.h"
 #include "DMSScheduler.h"
+#include "RTAScheduler.h"
+#include "KitchensinkLib.h"
 
 
 void processLine(std::vector<Process>& pVct, std::string& line)
@@ -180,7 +182,7 @@ void doStuff(std::vector<Process>& pVct)
 int main()
 {
 	std::vector<Process> pVct;
-	std::string str = "D:/GitHubRepos/RTS_P1/RTS_P1/T3.txt";
+	std::string str = "D:/GitHubRepos/RTS_P1/RTS/RTS_P1/T4.txt";
 
 	getProcessesFromFile(pVct, str);
 		
@@ -194,9 +196,18 @@ int main()
 	rs.sortByRMS(pVct);
 	rs.scheduleByRMS(pVct);*/
 
-	DMSScheduler ds;
+	/*DMSScheduler ds;
 	ds.sortByDMS(pVct);
-	ds.scheduleByDMS(pVct);
+	ds.scheduleByDMS(pVct);*/
+
+	RMSScheduler rs;
+	rs.sortByRMS(pVct);
+	
+
+	RTAScheduler rtaSched;
+	rtaSched.exactRTA(pVct);
+	
+	
 
 	while (true){
 

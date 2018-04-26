@@ -33,6 +33,9 @@
     <ClCompile Include="KitchensinkLib.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="RTAScheduler.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="paraFile.txt">
@@ -48,6 +51,9 @@
       <Filter>Ressourcendateien</Filter>
     </Text>
     <Text Include="T3.txt">
+      <Filter>Ressourcendateien</Filter>
+    </Text>
+    <Text Include="T4.txt">
       <Filter>Ressourcendateien</Filter>
     </Text>
   </ItemGroup>
@@ -67,5 +73,16 @@
     <ClInclude Include="KitchensinkLib.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
+    <ClInclude Include="RTAScheduler.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="RTS_P1.rc">
+      <Filter>Ressourcendateien</Filter>
+    </ResourceCompile>
   </ItemGroup>
 </Project>

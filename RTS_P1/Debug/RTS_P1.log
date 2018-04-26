@@ -1,25 +1,8 @@
-﻿Der Buildvorgang wurde am 25.04.2018 23:35:17 gestartet.
-     1>Projekt "C:\Users\Fabian\Desktop\rts\p1\RTS_P1\RTS_P1.vcxproj" auf Knoten "2", Build Ziel(e).
-     1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
-         main.cpp
-     1>c:\users\fabian\desktop\rts\p1\rts_p1\main.cpp(21): warning C4018: '<': Konflikt zwischen 'signed' und 'unsigned'
-     1>c:\users\fabian\desktop\rts\p1\rts_p1\main.cpp(72): warning C4018: '<': Konflikt zwischen 'signed' und 'unsigned'
-     1>c:\users\fabian\desktop\rts\p1\rts_p1\main.cpp(85): warning C4244: 'Initialisierung': Konvertierung von 'int' in 'float', möglicher Datenverlust
-     1>c:\users\fabian\desktop\rts\p1\rts_p1\main.cpp(111): warning C4018: '<': Konflikt zwischen 'signed' und 'unsigned'
-     1>c:\users\fabian\desktop\rts\p1\rts_p1\main.cpp(130): warning C4244: 'Argument': Konvertierung von 'unsigned int' in 'float', möglicher Datenverlust
-     1>c:\users\fabian\desktop\rts\p1\rts_p1\main.cpp(147): warning C4244: 'Argument': Konvertierung von 'int' in 'float', möglicher Datenverlust
-     1>c:\users\fabian\desktop\rts\p1\rts_p1\main.cpp(167): warning C4244: 'Argument': Konvertierung von 'unsigned int' in 'float', möglicher Datenverlust
-       Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Fabian\Desktop\rts\p1\Debug\RTS_P1.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Fabian\Desktop\rts\p1\Debug\RTS_P1.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Fabian\Desktop\rts\p1\Debug\RTS_P1.lib" /MACHINE:X86 Debug\DMSScheduler.obj
-         Debug\Lib.obj
-         Debug\main.obj
-         Debug\Process.obj
-         Debug\RMSScheduler.obj
-         Debug\StaticScheduler.obj
-         RTS_P1.vcxproj -> C:\Users\Fabian\Desktop\rts\p1\Debug\RTS_P1.exe
-     1>Die Erstellung des Projekts "C:\Users\Fabian\Desktop\rts\p1\RTS_P1\RTS_P1.vcxproj" ist abgeschlossen, Build Ziel(e).
-
-Build erfolgreich.
-
-Verstrichene Zeit 00:00:00.76
+﻿  RTAScheduler.cpp
+d:\githubrepos\rts_p1\rts\rts_p1\rtascheduler.cpp(18): warning C4018: "<": Konflikt zwischen "signed" und "unsigned"
+d:\githubrepos\rts_p1\rts\rts_p1\rtascheduler.cpp(30): warning C4018: "<": Konflikt zwischen "signed" und "unsigned"
+d:\githubrepos\rts_p1\rts\rts_p1\rtascheduler.cpp(35): warning C4244: "Initialisierung": Konvertierung von "int" in "float", möglicher Datenverlust
+d:\githubrepos\rts_p1\rts\rts_p1\rtascheduler.cpp(39): warning C4018: "<": Konflikt zwischen "signed" und "unsigned"
+d:\githubrepos\rts_p1\rts\rts_p1\rtascheduler.cpp(41): warning C4244: "Initialisierung": Konvertierung von "int" in "float", möglicher Datenverlust
+d:\githubrepos\rts_p1\rts\rts_p1\rtascheduler.cpp(88): warning C4244: "=": Konvertierung von "double" in "float", möglicher Datenverlust
+  RTS_P1.vcxproj -> D:\GitHubRepos\RTS_P1\RTS\Debug\RTS_P1.exe
