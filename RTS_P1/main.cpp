@@ -196,7 +196,7 @@ int main()
 	rs.sortByRMS(pVct);
 	rs.scheduleByRMS(pVct);*/
 
-	/*DMSScheduler ds;
+/*	DMSScheduler ds;
 	ds.sortByDMS(pVct);
 	ds.scheduleByDMS(pVct);*/
 
