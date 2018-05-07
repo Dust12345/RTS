@@ -56,7 +56,7 @@ int KitchensinkLib::lcm(int a, int b)
 void KitchensinkLib::writeDbLines(std::vector<std::string> dbLines)
 {
 	std::ofstream myfile;
-	myfile.open("D:/GitHubRepos/RTS_P1/RTS_P1/db.txt");
+	myfile.open("D:/GitHubRepos/RTS_P1/RTS/RTS_P1/db.txt");
 
 	std::string str = "";
 	for (int i = 0; i < dbLines.size(); i++)

@@ -22,6 +22,92 @@ void RTAScheduler::simpleRTA(std::vector<Process>& pVct)
 	}
 }
 
+void RTAScheduler::swap(std::vector<Process>& pVct, int k, int next)
+{
+	Process tmp = pVct[k];
+	pVct[k] = pVct[next];
+	pVct[next] = tmp;
+}
+
+void RTAScheduler::scheduleOPA(std::vector<Process>& pVct)
+{
+	for (int k = 0; k < pVct.size(); k++)
+	{
+		bool ok = false;
+
+		for (int next = 0; next < pVct.size(); next++)
+		{
+			swap(pVct, k, next);
+			ok = exactRTA(pVct, k);
+
+			if (ok)
+			{
+				break;
+			}
+		}
+
+		if (!ok)
+		{
+			std::cout << "OPA failed" << std::endl;
+			return;
+		}
+	}
+
+	std::cout << "OPA worked" << std::endl;
+	std::cout << "Priorities are:" << std::endl;
+	for (int i = 0; i < pVct.size(); i++)
+	{
+		std::cout << pVct[i].name << std::endl;
+	}
+
+}
+
+bool RTAScheduler::exactRTA(std::vector<Process>& pVct, int k)
+{
+	std::vector<int> peroids;
+
+	for (int i = 0; i < pVct.size(); i++)
+	{
+		peroids.push_back(pVct[i].period);
+	}
+
+	float d = KitchensinkLib::lcmOfN(peroids);
+
+	float delta = 1;
+
+	for (int i = 0; i < pVct.size(); i++)
+	{
+		float rLastIt = pVct[i].compTime;
+
+		while (true)
+		{
+			float r = exactRTA(pVct, rLastIt, i);
+			//std::cout << "Task: " << pVct[i].name << " is " << r << std::endl;
+			//check break condition
+
+			
+
+			if (std::abs(r - rLastIt) < delta || r>d)
+			{	
+
+				if (k == i) {
+					return true;
+				}
+
+				break;
+			}
+			else
+			{
+				rLastIt = r;
+			}
+
+		}
+	}
+	return false;
+	//std::cout << "All jobs done" << std::endl;
+}
+
+
 void RTAScheduler::exactRTA(std::vector<Process>& pVct)
 {
 
@@ -45,7 +131,13 @@ void RTAScheduler::exactRTA(std::vector<Process>& pVct)
 			float r = exactRTA(pVct, rLastIt,i);
 			std::cout << "Task: " << pVct[i].name << " is " << r << std::endl;
 			//check break condition
-			if (std::abs(r - rLastIt) < delta || r>d)
+
+			if (r>d) {
+				std::cout << "Job set wont work" << std::endl;
+				return;
+			}
+
+			if (std::abs(r - rLastIt) < delta)
 			{				
 				break;
 			}

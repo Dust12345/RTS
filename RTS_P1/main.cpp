@@ -182,7 +182,7 @@ void doStuff(std::vector<Process>& pVct)
 int main()
 {
 	std::vector<Process> pVct;
-	std::string str = "D:/GitHubRepos/RTS_P1/RTS/RTS_P1/T4.txt";
+	std::string str = "D:/GitHubRepos/RTS_P1/RTS/RTS_P1/T3.txt";
 
 	getProcessesFromFile(pVct, str);
 		
@@ -201,11 +201,13 @@ int main()
 	ds.scheduleByDMS(pVct);*/
 
 	RMSScheduler rs;
-	rs.sortByRMS(pVct);
+	//rs.sortByRMS(pVct);
 	
 
 	RTAScheduler rtaSched;
-	rtaSched.exactRTA(pVct);
+	//rtaSched.simpleRTA(pVct);
+	//rtaSched.exactRTA(pVct);
+	rtaSched.scheduleOPA(pVct);
 	
 	
 
