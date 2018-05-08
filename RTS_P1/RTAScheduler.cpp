@@ -82,12 +82,14 @@ bool RTAScheduler::exactRTA(std::vector<Process>& pVct, int k)
 		while (true)
 		{
 			float r = exactRTA(pVct, rLastIt, i);
-			//std::cout << "Task: " << pVct[i].name << " is " << r << std::endl;
-			//check break condition
-
+			
+			if (r>pVct[i].prio && k==i) {
+				//std::cout << "Job set wont work" << std::endl;
+				return false;
+			}
 			
 
-			if (std::abs(r - rLastIt) < delta || r>d)
+			if (std::abs(r - rLastIt) < delta)
 			{	
 
 				if (k == i) {
@@ -132,7 +134,7 @@ void RTAScheduler::exactRTA(std::vector<Process>& pVct)
 			std::cout << "Task: " << pVct[i].name << " is " << r << std::endl;
 			//check break condition
 
-			if (r>d) {
+			if (r>pVct[i].prio) {
 				std::cout << "Job set wont work" << std::endl;
 				return;
 			}

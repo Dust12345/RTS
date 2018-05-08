@@ -192,22 +192,22 @@ int main()
 	//ss.calccSchedule(pVct);
 
 
-	/*RMSScheduler rs;
-	rs.sortByRMS(pVct);
-	rs.scheduleByRMS(pVct);*/
+	//RMSScheduler rs;
+	//rs.sortByRMS(pVct);
+	//rs.scheduleByRMS(pVct);
 
-/*	DMSScheduler ds;
+	DMSScheduler ds;
 	ds.sortByDMS(pVct);
-	ds.scheduleByDMS(pVct);*/
+	//ds.scheduleByDMS(pVct);
 
-	RMSScheduler rs;
+//	RMSScheduler rs;
 	//rs.sortByRMS(pVct);
 	
 
 	RTAScheduler rtaSched;
 	//rtaSched.simpleRTA(pVct);
-	//rtaSched.exactRTA(pVct);
-	rtaSched.scheduleOPA(pVct);
+	rtaSched.exactRTA(pVct);
+	//rtaSched.scheduleOPA(pVct);
 	
 	
 
